@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio de JavaScript</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.5em;
+        }
+        body {
+            background-color: lightblue;
+        }
+        .container {
+            /* background-color: white; */
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            /* flex-flow: column nowrap; */
+            align-items: center;
+            justify-content: center;
+            
+        }
+        section.section-01 {
+            background-color: white;
+            padding: 20px;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            border-radius: 10px;
+            flex-shrink: 1;
+            flex-grow: 0;
+            flex-basis: 800px;
+            margin: 20px;
+
+        }
+        section.section-01 > h1 {
+            text-align: center;
+        }
+        
+        section.section-01 > p {
+            text-align: justify;
+        }
+
+        .section-02 > p {
+            color:  green;
+            background-color: rgb(236, 235, 235);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.274);
+            text-align: center;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="section-01">
+            <h1>Cálculo de porcentagem</h1>
+            <h2>Exemplo 01</h2>
+            <p>
+                Uma loja de tercnologia vende um computador por <strong>R$ 1850,00</strong>. Na época da Black Friday, o dono da loja autorizou um desconto de <strong>20%</strong> no preço do PC para aumentar as vendas e liberar estoque. Qual será o valor do PC na Black Friday:?
+            </p>
+            <section class="section-02" id="resultado">
+                <p>Sua resposta...</p>
+            </section>
+            <script>
+                let preco = 1850;
+                let porc = 20;
+                let valor = (preco * 20) / 100;
+                let novo = preco - valor
+
+                let res = window.document.getElementById('resultado')
+                res.innerHTML = `<p>Olá, o novo valor é: <strong>R$${novo},00</strong>!`
+
+            </script>
+        </section>
+    </div>
+
+</body>
+</html>
