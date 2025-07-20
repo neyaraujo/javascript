@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D002 - Desafio das Mensagens</title>
+    <style>
+        button.botao {
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Boas-vindas</h1>
+    <button onclick="idade()" class="botao" id="bt1">Inicie o desafio</button>
+
+    <script>
+
+        function idade() {
+            let nome = window.prompt('Qual é seu nome?');
+            let idade = window.prompt('Ola ' + nome + '! Quantos anos você tem?')
+            alert('Acabei de conhecer ' + nome + ', que tem ' + idade + ' anos de idade!')
+        }
+    </script>
+</body>
+</html>

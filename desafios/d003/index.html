@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D003 - Antecessor e Sucessor</title>
+    <style>
+        button.botao {
+            padding: 10px;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.479);
+        }
+    </style>
+</head>
+<body>
+    <h1>Antes e Depois</h1>
+    <button onclick="acao1()" class="botao" id="bt1">Antecessor e Sucessor</button>
+    <script>
+        function acao1() {
+            let numero = Number.parseInt(prompt('Digite um número inteiro qualquer'))
+            let ant = numero - 1;
+            let suc = numero + 1;
+            window.alert('Antes de '+ numero + ', temos o número ' + ant + '.\nDepois de ' + numero + ', temos o número ' + suc)
+        }
+    </script>
+</body>
+</html>
