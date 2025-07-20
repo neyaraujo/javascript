@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-flow: column;
+            margin: 100px auto 0;
+            padding: 50px;
+            border: 1px solid rgb(156, 156, 156);
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        body h1 {
+            text-align: center;
+            margin: 30px 0px;
+        }
+        body input {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid rgb(99, 99, 99);
+            border-radius: 5px;
+        }
+        body input:nth-last-child(3){
+            
+            padding: 10px 40px;
+            align-self: center;
+            color: red;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <h2 id="retur"></h2>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+
+    <script>
+        function somar(){
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var retorno = window.document.getElementById('retorno')
+            
+        }
+    </script>
+</body>
+</html>
