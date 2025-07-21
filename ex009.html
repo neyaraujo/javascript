@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .radius-5 {
+        border-radius: 5px;
+    }
+    .radius-10{
+        border-radius: 10px;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #141499;
+
+    }
+    .quiz {
+        width: 80%;
+        max-width: 600px;
+        margin: 100px auto 0;
+        padding: 10px;
+    }
+    .quiz-bg {
+        background: white;
+    }
+    .quiz h1 {
+        border-bottom: 1px solid #141499;
+        font-size: 25px;
+        padding: 10px 0px;
+        margin: 10px 0;
+    }
+    .quiz h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .form {
+        /* border: 1px solid black ; */
+        width: 100%;
+        display: flex;
+        justify-content: spsace-between;
+        margin-bottom: 20px;
+    }
+    .form input {
+        flex: 2 1;
+        margin-right: 10px;
+        padding: 10px;
+    }
+    .form button {
+        flex: 1 1;
+        padding: 10px;
+    }
+    .res {
+        display: none;
+        text-align: center;
+        border: 1px solid green;
+        padding: 10px;
+    }
+
+
+</style>
+<body>
+    
+<!-- var país = 'US'
+console.log(`Vivendo em ${país}`)
+if (país != 'BR') {
+    console.log(`Você é estrangeiro!`)
+} else {
+    console.log('Você é brasileiro')
+} -->
+<section class="quiz quiz-bg radius-10">
+    <div>
+        <h1>Controle de Nacionalidade</h1>
+        <h2>Em qual país você nasceu?</h2>
+        <div class="form">
+            <input type="text" name="txtcuf" id="txtuf">
+            <button type="submit" onclick="verificar()">Verificar</button>
+        </div>
+    </div>
+    <div class="res" id="res"></div>
+</section>
+
+    <script>
+        function verificar(){
+            var pais = window.document.querySelector('#txtuf')
+            var res = window.document.getElementById('res')
+            res.style.display = 'block'
+
+            var pais = pais.value.toUpperCase()
+
+            if (pais == 'BRASIL'){
+                res.innerHTML = `<p>Você nasceu no <strong>${pais}</strong>, brasileiro.</p>`
+            }
+            else {
+                res.innerHTML = `<p>Você nasceu no <strong>${pais}</strong>, é estrangeira.</p>`
+            }
+        }
+    </script>
+
+
+</body>
+</html>
