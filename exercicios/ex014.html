@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * 
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body
+    {
+        
+        font-family: Arial, Helvetica, sans-serif;
+        transition: all 1s ease-in-out;
+    }
+    header h1 
+    {
+        text-align: center;
+        color: white;
+        margin: 20px 0;
+    }
+    .content-box 
+    {
+        width: 80%;
+        max-width: 600px;
+        background: white;
+        margin: 20px auto;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.541);
+    }
+    .content-box h2
+    {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 16px;
+    }
+    .image-container
+    {
+        width: 100%;
+        /* margin: auto; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+
+    }
+    .image-container img
+    {
+        width: 100%;
+        max-width: 50%;
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        cursor: pointer;
+
+    }
+    .main-footer p
+    {
+        text-align: center;
+        color: white;
+        margin-bottom: 10px;
+        text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.541);
+    }
+
+</style>
+<body>
+    <header class="main-header">
+        <h1>Hora do Dia</h1>
+    </header>
+    <section class="content-box">
+        <h2 id="retur">Sub titulo</h2>
+        <div class="image-container">
+            <img src="img/manha.png" alt="" onclick="atulizar()">
+        </div>
+    </section>
+    <footer class="main-footer">
+        <p>Criado por neyaraujo</p>
+    </footer>
+
+    <script>
+        atulizar()
+        
+        function atulizar(){
+        var agora = new Date()
+        var hora = agora.getHours()
+
+        var retur = window.document.getElementById('retur')
+        if (hora <= 11){
+            retur.innerHTML = `Agora são ${hora} horas Bom dia!` 
+            document.body.style.background = '#aaaaff'
+        }else{
+            if (hora <=17){
+                retur.innerHTML = `Agora são ${hora} horas Boa tarde!` 
+                document.body.style.background = '#0000ff'
+            }else{
+                retur.innerHTML = `Agora são ${hora} horas Boa noite!`
+                document.body.style.background = '#000022' 
+            }
+        }
+        }
+        
+    </script>
+</body>
+
+</html>
