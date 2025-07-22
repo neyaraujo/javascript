@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interativo</title>
+</head>
+<style>
+    body {
+        background:#0c0c8b;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .container {
+        width: 80%;
+        max-width: 600px;
+        margin: 100px auto 0px;
+        background: #fff;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .container .header {
+        width: 100%;
+    }
+    .container .header h1 {
+        font-size: 25px;
+        border-bottom: 1px solid #0c0c8b;
+        padding: 10px 0;
+        margin-bottom: 10px;
+    }
+    .container .header h2 {
+        font-size: 16px;
+    }
+    .option-btn {
+        width: 100%;
+    }
+    .option-btn button {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        text-align: left;
+        background: #fff;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .option-btn button:hover {
+        background: #0c0c8b;
+        color: #fff;
+    }
+
+
+    .btn-next {
+        width: 100%;
+        /* border: 1px solid black; */
+    }
+    .btn-next button {
+        display: none;
+        margin: auto;
+        padding: 10px 30px; 
+        cursor: pointer;
+    }
+
+
+
+
+</style>
+<body>
+    <section class="container">
+        <div class="header">
+            <h1>Simple Quiz</h1>
+            <h2>Which is largest animal in the world?</h2>
+        </div>
+        <div class="option-btn">
+            <button id="op1" onclick="op_01()">Option 01</button>
+            <button id="op2" onclick="op_02()">Option 02</button>
+            <button id="op3" onclick="op_03()">Option 03</button>
+            <button id="op4" onclick="op_04()">Option 04</button>
+        </div>
+        <div class="btn-next">
+            <button id="next" onclick="next()""><span>Next</span></button>
+        </div>
+    </section>
+    
+    <script>
+        var resp = window.document.getElementById('op1')
+        var op2 = window.document.getElementById('op2')
+        var op3 = window.document.getElementById('op3')
+        var op4 = window.document.getElementById('op4')
+        function op_01(){
+            resp.style.background = 'red'
+            resp.style.color = '#fff' 
+            
+            op2.style.background = 'green'
+            op2.style.color = 'white'
+            
+            var next = window.document.getElementById('next')
+            next.style.display = 'block'
+        }
+
+        function next(){
+            location.reload();
+        }
+    </script>
+
+
+</body>
+</html>

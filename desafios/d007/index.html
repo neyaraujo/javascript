@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+    <style>
+        button {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor R$ US$</h1>
+    <button onclick="converter()">Converter</button>
+    <p id="res">Clique no botão acima para iniciar.</p>
+
+    <script>
+        function converter(){
+            var real = prompt('Quantos R$ você tem na carteira?')
+            var cotacao = 5.57
+            var dolar = real / cotacao
+
+            var res = document.getElementById('res')
+            res.innerHTML = `<h2>Você tem R$ ${Number(real).toFixed(2).replace('.',',')} reais equivalente a U$ ${parseInt(dolar).toFixed(2).replace('.',',')} dolares</h2>`
+
+        }
+    </script>
+</body>
+</html>

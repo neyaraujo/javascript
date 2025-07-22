@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Desconto</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcular Desconto</h1>
+    <button onclick="desconto()">Desconto de 10%</button>
+    <p id="res">Clique no botão acima para iniciar.</p>
+
+    <script>
+        function desconto(){
+            var produto = prompt(`Qual é o produto que você está comprando?`)
+            var preco = prompt(`Qual é o preço de ${produto} que você está comprando?`)
+            var taxa = 10 / 100
+            var pocentagem = (taxa * 100 + '%') 
+            var desconto = preco * taxa
+            var precoAntigo = preco
+            var precoNovo = preco - desconto
+
+            var res = document.getElementById('res')
+            res.innerHTML = `<h2>Calculando desconto de ${pocentagem} para ${produto} </h2>`
+
+            res.innerHTML += `<p>O preço original era de R$ ${Number(precoAntigo).toFixed(2).replace('.',',')}</p>`
+            res.innerHTML += `<p>Você acaba de ganhar R$ ${Number(desconto).toFixed(2).replace('.',',')} de desconto (-${pocentagem}).</p>`
+
+            res.innerHTML += `No fim, você vai pagar R$ ${Number(precoNovo).toFixed(2).replace('.',',')} no produto ${produto}.`
+            
+
+        }
+            
+    </script>
+</body>
+</html>
