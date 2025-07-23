@@ -66,8 +66,6 @@
         aspect-ratio: 1/1;
         object-fit: cover;
         object-position: top;
-        
-        
     }
 
 
@@ -85,17 +83,19 @@
             <div class="content-radio">
                 <label for="">Sexo:</label>
                 <div>
-                    <input type="radio" name="sexo" id="imasculino">
+                    <input type="radio" name="sexo" id="imasculino" value="M">
                     <label for="imasculino">Masculino</label>
                 </div>
                 <div>
-                    <input type="radio" name="sexo" id="ifeminino">
+                    <input type="radio" name="sexo" id="ifeminino" value="F">
                     <label for="ifeminino">Feminíno</label>
                 </div>
             </div>
             <button onclick="verificar()" class="btn">Verificar</button>
         </form>
-            <p id="resp">Preencha os dados acima para vê o resultado</p>
+            <div class="resultado">
+                <p id="resp">Preencha os dados acima para vê o resultado</p>
+            </div>
         <div class="image-container">
             <img src="exercicios/img/perfil.jpg" alt="">
         </div>
@@ -103,9 +103,14 @@
     <footer class="main-footer">CursoemVideo</footer>
 
     <script>
-        function Verificador(){
-            var inascimento = document.getElementById('inascimento')
-            document.body.innerHTML += inascimento
+        function verificar(){
+                var inascimento = document.getElementById('inascimento')
+                var sexo = document.querySelector('input[name="sexo"]:checked')
+                var texto = document.querySelector('#resp')
+
+                texto.innerHTML = `<p>${inascimento.value}</p>`
+                texto.innerHTML = `${sexo.value}`
+
         }
     </script>
 
