@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background: rgb(0, 195, 255);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    header h1{
+        text-align: center;
+        color: white;
+    }
+    section {
+        width: 80%;
+        max-width: 400px;
+        background: white;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 0 auto;
+    }
+    section div {
+        margin: 20px 0;
+    }
+    footer {
+        text-align: center;
+        color: white;
+        font-style: italic;
+    }
+</style>
+<body class="page">
+    <header class="page-header">
+        <h1 class="main-title">Vamos contar</h1>
+    </header>
+    <section class="counter-section">
+        <div class="form-group">
+            <label for="inicio">Inicio:</label>
+            <input class="input-number" type="number" name="inicio" id="inicio">
+        </div>
+        <div class="form-group">
+            <label for="fim">Fim:</label>
+            <input class="input-number" type="number" name="fim" id="fim">
+        </div>
+        <div class="form-group">
+            <label for="passo">Passo:</label>
+            <input class="input-number" type="number" name="passo" id="passo">
+        </div>
+        <div class="form-group">
+            <button onclick="contar()" type="button" id="btn-contar" class="btn-primary">Contar</button>
+        </div>
+        <div class="result-container">
+            <p id="resultado"></p>
+        </div>
+    </section>
+    <footer class="page-footer">
+        <p class="footer-text">&copy;CursoemVideo</p>
+    </footer>
+
+    <script src="ex016.js"></script>
+
+
+</body>
+</html>

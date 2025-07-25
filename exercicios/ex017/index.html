@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: rgb(0, 255, 191);
+
+        }
+        header h1{
+            color: white;
+            text-align: center;
+
+        }
+        section {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-block;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        select {
+            width: 50%;
+        }
+        .content-resultado {
+            margin-top: 10px;
+            display: inline-block;
+            min-height: 100px;
+            background: #ccc;
+            padding: 10px;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        .content-resultado p {
+            margin: 0px;
+        }
+    </style>
+</head>
+<body class="main-page">
+    <header class="main-header">
+        <h1 class="main-title">Tabuada</h1>
+    </header>
+    <section class="content-section">
+        <div class="form-number">
+            <label class="label-number" for="input-number"></label>
+            <input type="number" name="input-number" id="input-number">
+            <button class="btn-primary" id="btn-gerar" onclick="gerarTabuada()">Gerar Tabuada</button>
+        </div>
+        <div class="content-resultado">
+            <p id="resultado">Didite um número acima</p>
+        </div>
+    </section>
+    <script src="ex017.js"></script>
+</body>
+</html>
