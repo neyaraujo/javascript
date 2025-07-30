@@ -22,37 +22,60 @@
         max-width: 400px;
         margin: 0 auto;
         box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.333);
+
+        
     }
     .form__entrada {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         gap: 5px;
     }
+    .form__saida {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .form__saida button {
+        order: 0;
+        align-self: center;
+        padding: 10px 30px;
+        border-radius: 5px
+    }
+
     .form__saida select {
-        width: 40%;
+        width: 80%;
         display: block;
+        margin: 10px auto;
+
+        
     }
     .footer p {
         color: white;
         text-align: center;
     }
 
+
 </style>
 
-<body>
+<body onload="reset()">
     <header class="header">
         <h1>Analizador de Nùmeros</h1>
     </header>
     <section class="form">
         <article class="form__entrada">
             <p class="form__texto">Número (entre 1 e 100): <input class="form__number" type="number" id="input-number"></p>
-            <input onclick="adicionar()" class="form__button" type="button" value="Adicionar">
+            <input onclick="chamar()" class="form__button" type="button" value="Adicionar">
         </article>
 
         <article class="form__saida">
-            <select name="" id="list-number" size="10">
+            <select class="form__list" name="" id="form__list" size="10">
+                <!-- option gerados pelo javascript -->
             </select>
             <button onclick="finalizar()" class="form__button" type="button">Finalizar</button>
+            <div class="form__result" id="form__result">
+                <!-- Aqui será gerado o resultado gerado por javascript -->
+            </div>
         </article>
     </section>
     <footer class="footer">
