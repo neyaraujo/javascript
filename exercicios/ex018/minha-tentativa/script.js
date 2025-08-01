@@ -52,8 +52,15 @@ function msgErro() {
 
 
 function adicionar() {
+    // Zera os resultados
+    let result = window.document.getElementById('form__result')
+    result.innerHTML = ''
+
+    // Seta os elementos
     let valor = window.document.getElementById('input-number')
     let selectList = document.getElementById('form__list')    
+
+
 
     if (valor.value < 1 || valor.value >100) {
         alert(`[ERRO] você escolheu o numero ${valor.value}`)
